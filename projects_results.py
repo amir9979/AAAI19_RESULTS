@@ -66,9 +66,10 @@ def write_diagnosis_results(projects, out_path):
     rows = []
     for project in projects:
         for configuration in project.diagnosis:
-            if len(scores) == 0:
-                scores = project.diagnosis[configuration].keys()
-            rows.append([project.project_name, configuration] + map(lambda score: project.diagnosis[configuration][score], scores))
+            for ind in project.diagnosis[configuration]:
+                if len(scores) == 0:
+                    scores = project.diagnosis[configuration][ind].keys()
+                rows.append([project.project_name, configuration, ind] + map(lambda score: project.diagnosis[configuration][ind][score], scores))
     rows = [header + scores] + rows
     with open(out_path, "wb") as f:
         writer = csv.writer(f)
@@ -77,11 +78,12 @@ def write_diagnosis_results(projects, out_path):
 
 def write_prediction_results(projects, out_path):
     scores = ['PRC Area', 'ROC area', 'F-measure', 'FP rate', 'recall', 'MCC', 'TP rate', 'precision']
-    header = ['project', 'configuration'] + scores
+    header = ['project', 'configuration', 'class'] + scores
     rows = [header]
     for project in projects:
         for configuration in project.prediction:
-            rows.append([project.project_name, configuration] + map(lambda score: project.prediction[configuration]['test']['accuracy by class']['weighted avg'][score], scores))
+            for test_class in project.prediction[configuration]['test']['accuracy by class']:
+                rows.append([project.project_name, configuration, test_class] + map(lambda score: project.prediction[configuration]['test']['accuracy by class'][test_class][score], scores))
     with open(out_path, "wb") as f:
         writer = csv.writer(f)
         writer.writerows(rows)

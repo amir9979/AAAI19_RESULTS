@@ -1,49 +1,145 @@
-project,configuration,PRC Area,ROC area,F-measure,FP rate,recall,MCC,TP rate,precision
-Ant,files_all,0.95,0.896,0.912,0.815,0.927,0.176,0.927,0.903
-Ant,methods_all,0.992,0.925,0.988,0.971,0.992,0.116,0.992,0.989
-Ant,methods_most,0.999,0.992,0.999,0.999,0.999,0,0.999,0.998
-Ant,files_most,0.973,0.866,0.955,0.882,0.958,0.087,0.958,0.952
-CAY,files_all,0.998,0.998,0.995,0.308,0.995,0.7,0.995,0.995
-CAY,methods_all,1,0,1,0,1,0,1,1
-CAY,methods_most,1,0,1,0,1,0,1,1
-CAY,files_most,0.999,0.998,0.998,0.856,0.998,0.267,0.998,0.997
-DELTASPIKE,files_all,0.971,0.863,0.956,0.901,0.968,0.177,0.968,0.955
-DELTASPIKE,methods_all,1,0,1,0,1,0,1,1
-DELTASPIKE,methods_most,1,0,1,0,1,0,1,1
-DELTASPIKE,files_most,0.974,0.713,0.972,0.953,0.981,0.167,0.981,0.982
-FLINK,files_all,0.971,0.915,0.946,0.655,0.957,0.523,0.957,0.956
-FLINK,methods_all,1,0,1,0,1,0,1,1
-FLINK,methods_most,1,0,1,0,1,0,1,1
-FLINK,files_most,0.98,0.801,0.976,0.823,0.982,0.379,0.982,0.981
-IO,files_all,0.984,0.5,0.988,0.992,0.992,0,0.992,0.984
-IO,methods_all,1,0,1,0,1,0,1,1
-IO,methods_most,1,0,1,0,1,0,1,1
-IO,files_most,0.992,0.5,0.994,0.996,0.996,0,0.996,0.992
-JCLOUDS,files_all,0.995,0.614,0.995,0.997,0.997,0,0.997,0.994
-JCLOUDS,methods_all,1,0,1,0,1,0,1,1
-JCLOUDS,methods_most,1,0,1,0,1,0,1,1
-JCLOUDS,files_most,0.996,0.54,0.997,0.998,0.998,0,0.998,0.995
-KYLIN,files_all,0.94,0.883,0.9,0.802,0.919,0.196,0.919,0.892
-KYLIN,methods_all,1,0,1,0,1,0,1,1
-KYLIN,methods_most,1,0,1,0,1,0,1,1
-KYLIN,files_most,0.974,0.81,0.969,0.918,0.978,0.168,0.978,0.968
-MYFACES,files_all,0.979,0.95,0.892,0.038,0.842,0.35,0.842,0.974
-MYFACES,methods_all,1,0,1,0,1,0,1,1
-MYFACES,methods_most,1,0,1,0,1,0,1,1
-MYFACES,files_most,0.988,0.966,0.977,0.599,0.974,0.297,0.974,0.981
-OAK,files_all,0.98,0.901,0.946,0.937,0.963,0.159,0.963,0.964
-OAK,methods_all,1,0,1,0,1,0,1,1
-OAK,methods_most,1,0,1,0,1,0,1,1
-OAK,files_most,0.992,0.899,0.981,0.987,0.987,0,0.987,0.974
-OPENNLP,files_all,0.775,0.785,0.551,0.68,0.68,0,0.68,0.463
-OPENNLP,methods_all,1,0,1,0,1,0,1,1
-OPENNLP,methods_most,1,0,1,0,1,0,1,1
-OPENNLP,files_most,0.926,0.669,0.927,0.951,0.951,0,0.951,0.904
-TOBAGO,files_all,0.919,0.875,0.84,0.828,0.884,0.166,0.884,0.853
-TOBAGO,methods_all,1,0,1,0,1,0,1,1
-TOBAGO,methods_most,1,0,1,0,1,0,1,1
-TOBAGO,files_most,0.968,0.906,0.939,0.96,0.957,-0.01,0.957,0.921
-TOMEE,files_all,0.979,0.898,0.972,0.792,0.976,0.268,0.976,0.969
-TOMEE,methods_all,1,0,1,0,1,0,1,1
-TOMEE,methods_most,1,0,1,0,1,0,1,1
-TOMEE,files_most,0.986,0.803,0.984,0.785,0.986,0.258,0.986,0.983
+project,configuration,class,PRC Area,ROC area,F-measure,FP rate,recall,MCC,TP rate,precision
+Ant,files_all,weighted avg,0.95,0.896,0.912,0.815,0.927,0.176,0.927,0.903
+Ant,files_all,valid,0.992,0.896,0.962,0.87,0.982,0.176,0.982,0.942
+Ant,files_all,bugged,0.334,0.896,0.187,0.018,0.13,0.176,0.13,0.333
+Ant,methods_all,weighted avg,0.992,0.925,0.988,0.971,0.992,0.116,0.992,0.989
+Ant,methods_all,valid,0.999,0.925,0.996,0.979,1,0.116,1,0.992
+Ant,methods_all,bugged,0.205,0.925,0.04,0,0.021,0.116,0.021,0.667
+Ant,methods_most,weighted avg,0.999,0.992,0.999,0.999,0.999,0,0.999,0.998
+Ant,methods_most,valid,1,0.992,1,1,1,0,1,0.999
+Ant,methods_most,bugged,0.071,0.992,0,0,0,0,0,0
+Ant,files_most,weighted avg,0.973,0.866,0.955,0.882,0.958,0.087,0.958,0.952
+Ant,files_most,valid,0.996,0.866,0.979,0.906,0.982,0.087,0.982,0.975
+Ant,files_most,bugged,0.148,0.866,0.107,0.018,0.094,0.087,0.094,0.125
+CAY,files_all,weighted avg,0.998,0.998,0.995,0.308,0.995,0.7,0.995,0.995
+CAY,files_all,valid,1,0.998,0.998,0.31,0.998,0.7,0.998,0.998
+CAY,files_all,bugged,0.719,0.998,0.702,0.002,0.69,0.7,0.69,0.714
+CAY,methods_all,weighted avg,1,0,1,0,1,0,1,1
+CAY,methods_all,valid,1,?,1,0,1,0,1,1
+CAY,methods_all,bugged,?,?,0,0,0,0,0,0
+CAY,methods_most,weighted avg,1,0,1,0,1,0,1,1
+CAY,methods_most,valid,1,?,1,0,1,0,1,1
+CAY,methods_most,bugged,?,?,0,0,0,0,0,0
+CAY,files_most,weighted avg,0.999,0.998,0.998,0.856,0.998,0.267,0.998,0.997
+CAY,files_most,valid,1,0.998,0.999,0.857,1,0.267,1,0.998
+CAY,files_most,bugged,0.476,0.998,0.222,0,0.143,0.267,0.143,0.5
+DELTASPIKE,files_all,weighted avg,0.971,0.863,0.956,0.901,0.968,0.177,0.968,0.955
+DELTASPIKE,files_all,valid,0.994,0.863,0.984,0.931,0.998,0.177,0.998,0.97
+DELTASPIKE,files_all,bugged,0.288,0.863,0.121,0.002,0.069,0.177,0.069,0.5
+DELTASPIKE,methods_all,weighted avg,1,0,1,0,1,0,1,1
+DELTASPIKE,methods_all,valid,1,?,1,0,1,0,1,1
+DELTASPIKE,methods_all,bugged,?,?,0,0,0,0,0,0
+DELTASPIKE,methods_most,weighted avg,1,0,1,0,1,0,1,1
+DELTASPIKE,methods_most,valid,1,?,1,0,1,0,1,1
+DELTASPIKE,methods_most,bugged,?,?,0,0,0,0,0,0
+DELTASPIKE,files_most,weighted avg,0.974,0.713,0.972,0.953,0.981,0.167,0.981,0.982
+DELTASPIKE,files_most,valid,0.99,0.713,0.991,0.971,1,0.167,1,0.981
+DELTASPIKE,files_most,bugged,0.208,0.713,0.056,0,0.029,0.167,0.029,1
+FLINK,files_all,weighted avg,0.971,0.915,0.946,0.655,0.957,0.523,0.957,0.956
+FLINK,files_all,valid,0.991,0.915,0.977,0.697,0.999,0.523,0.999,0.957
+FLINK,files_all,bugged,0.668,0.915,0.459,0.001,0.303,0.523,0.303,0.952
+FLINK,methods_all,weighted avg,1,0,1,0,1,0,1,1
+FLINK,methods_all,valid,1,?,1,0,1,0,1,1
+FLINK,methods_all,bugged,?,?,0,0,0,0,0,0
+FLINK,methods_most,weighted avg,1,0,1,0,1,0,1,1
+FLINK,methods_most,valid,1,?,1,0,1,0,1,1
+FLINK,methods_most,bugged,?,?,0,0,0,0,0,0
+FLINK,files_most,weighted avg,0.98,0.801,0.976,0.823,0.982,0.379,0.982,0.981
+FLINK,files_most,valid,0.992,0.801,0.991,0.84,1,0.379,1,0.983
+FLINK,files_most,bugged,0.406,0.801,0.273,0,0.16,0.379,0.16,0.913
+IO,files_all,weighted avg,0.984,0.5,0.988,0.992,0.992,0,0.992,0.984
+IO,files_all,valid,0.992,0.5,0.996,1,1,0,1,0.992
+IO,files_all,bugged,0.008,0.5,0,0,0,0,0,0
+IO,methods_all,weighted avg,1,0,1,0,1,0,1,1
+IO,methods_all,valid,1,?,1,0,1,0,1,1
+IO,methods_all,bugged,?,?,0,0,0,0,0,0
+IO,methods_most,weighted avg,1,0,1,0,1,0,1,1
+IO,methods_most,valid,1,?,1,0,1,0,1,1
+IO,methods_most,bugged,?,?,0,0,0,0,0,0
+IO,files_most,weighted avg,0.992,0.5,0.994,0.996,0.996,0,0.996,0.992
+IO,files_most,valid,0.996,0.5,0.998,1,1,0,1,0.996
+IO,files_most,bugged,0.004,0.5,0,0,0,0,0,0
+JCLOUDS,files_all,weighted avg,0.995,0.614,0.995,0.997,0.997,0,0.997,0.994
+JCLOUDS,files_all,valid,0.998,0.614,0.998,1,1,0,1,0.997
+JCLOUDS,files_all,bugged,0.14,0.614,0,0,0,0,0,0
+JCLOUDS,methods_all,weighted avg,1,0,1,0,1,0,1,1
+JCLOUDS,methods_all,valid,1,?,1,0,1,0,1,1
+JCLOUDS,methods_all,bugged,?,?,0,0,0,0,0,0
+JCLOUDS,methods_most,weighted avg,1,0,1,0,1,0,1,1
+JCLOUDS,methods_most,valid,1,?,1,0,1,0,1,1
+JCLOUDS,methods_most,bugged,?,?,0,0,0,0,0,0
+JCLOUDS,files_most,weighted avg,0.996,0.54,0.997,0.998,0.998,0,0.998,0.995
+JCLOUDS,files_most,valid,0.998,0.54,0.999,1,1,0,1,0.998
+JCLOUDS,files_most,bugged,0.085,0.54,0,0,0,0,0,0
+KYLIN,files_all,weighted avg,0.94,0.883,0.9,0.802,0.919,0.196,0.919,0.892
+KYLIN,files_all,valid,0.988,0.883,0.957,0.866,0.983,0.196,0.983,0.933
+KYLIN,files_all,bugged,0.347,0.883,0.2,0.017,0.134,0.196,0.134,0.395
+KYLIN,methods_all,weighted avg,1,0,1,0,1,0,1,1
+KYLIN,methods_all,valid,1,?,1,0,1,0,1,1
+KYLIN,methods_all,bugged,?,?,0,0,0,0,0,0
+KYLIN,methods_most,weighted avg,1,0,1,0,1,0,1,1
+KYLIN,methods_most,valid,1,?,1,0,1,0,1,1
+KYLIN,methods_most,bugged,?,?,0,0,0,0,0,0
+KYLIN,files_most,weighted avg,0.974,0.81,0.969,0.918,0.978,0.168,0.978,0.968
+KYLIN,files_most,valid,0.992,0.81,0.989,0.939,0.999,0.168,0.999,0.979
+KYLIN,files_most,bugged,0.189,0.81,0.108,0.001,0.061,0.168,0.061,0.5
+MYFACES,files_all,weighted avg,0.979,0.95,0.892,0.038,0.842,0.35,0.842,0.974
+MYFACES,files_all,valid,0.998,0.95,0.912,0.034,0.838,0.35,0.838,0.999
+MYFACES,files_all,bugged,0.325,0.95,0.265,0.162,0.966,0.35,0.966,0.153
+MYFACES,methods_all,weighted avg,1,0,1,0,1,0,1,1
+MYFACES,methods_all,valid,1,?,1,0,1,0,1,1
+MYFACES,methods_all,bugged,?,?,0,0,0,0,0,0
+MYFACES,methods_most,weighted avg,1,0,1,0,1,0,1,1
+MYFACES,methods_most,valid,1,?,1,0,1,0,1,1
+MYFACES,methods_most,bugged,?,?,0,0,0,0,0,0
+MYFACES,files_most,weighted avg,0.988,0.966,0.977,0.599,0.974,0.297,0.974,0.981
+MYFACES,files_most,valid,0.999,0.966,0.987,0.607,0.982,0.297,0.982,0.991
+MYFACES,files_most,bugged,0.217,0.966,0.301,0.018,0.393,0.297,0.393,0.244
+OAK,files_all,weighted avg,0.98,0.901,0.946,0.937,0.963,0.159,0.963,0.964
+OAK,files_all,valid,0.993,0.901,0.981,0.974,1,0.159,1,0.963
+OAK,files_all,bugged,0.669,0.901,0.051,0,0.026,0.159,0.026,1
+OAK,methods_all,weighted avg,1,0,1,0,1,0,1,1
+OAK,methods_all,valid,1,?,1,0,1,0,1,1
+OAK,methods_all,bugged,?,?,0,0,0,0,0,0
+OAK,methods_most,weighted avg,1,0,1,0,1,0,1,1
+OAK,methods_most,valid,1,?,1,0,1,0,1,1
+OAK,methods_most,bugged,?,?,0,0,0,0,0,0
+OAK,files_most,weighted avg,0.992,0.899,0.981,0.987,0.987,0,0.987,0.974
+OAK,files_most,valid,0.998,0.899,0.993,1,1,0,1,0.987
+OAK,files_most,bugged,0.575,0.899,0,0,0,0,0,0
+OPENNLP,files_all,weighted avg,0.775,0.785,0.551,0.68,0.68,0,0.68,0.463
+OPENNLP,files_all,valid,0.852,0.785,0.81,1,1,0,1,0.68
+OPENNLP,files_all,bugged,0.611,0.785,0,0,0,0,0,0
+OPENNLP,methods_all,weighted avg,1,0,1,0,1,0,1,1
+OPENNLP,methods_all,valid,1,?,1,0,1,0,1,1
+OPENNLP,methods_all,bugged,?,?,0,0,0,0,0,0
+OPENNLP,methods_most,weighted avg,1,0,1,0,1,0,1,1
+OPENNLP,methods_most,valid,1,?,1,0,1,0,1,1
+OPENNLP,methods_most,bugged,?,?,0,0,0,0,0,0
+OPENNLP,files_most,weighted avg,0.926,0.669,0.927,0.951,0.951,0,0.951,0.904
+OPENNLP,files_most,valid,0.968,0.669,0.975,1,1,0,1,0.951
+OPENNLP,files_most,bugged,0.116,0.669,0,0,0,0,0,0
+TOBAGO,files_all,weighted avg,0.919,0.875,0.84,0.828,0.884,0.166,0.884,0.853
+TOBAGO,files_all,valid,0.981,0.875,0.938,0.938,0.994,0.166,0.994,0.888
+TOBAGO,files_all,bugged,0.453,0.875,0.112,0.006,0.062,0.166,0.062,0.6
+TOBAGO,methods_all,weighted avg,1,0,1,0,1,0,1,1
+TOBAGO,methods_all,valid,1,?,1,0,1,0,1,1
+TOBAGO,methods_all,bugged,?,?,0,0,0,0,0,0
+TOBAGO,methods_most,weighted avg,1,0,1,0,1,0,1,1
+TOBAGO,methods_most,valid,1,?,1,0,1,0,1,1
+TOBAGO,methods_most,bugged,?,?,0,0,0,0,0,0
+TOBAGO,files_most,weighted avg,0.968,0.906,0.939,0.96,0.957,-0.01,0.957,0.921
+TOBAGO,files_most,valid,0.994,0.906,0.978,1,0.997,-0.01,0.997,0.96
+TOBAGO,files_most,bugged,0.335,0.906,0,0.003,0,-0.01,0,0
+TOMEE,files_all,weighted avg,0.979,0.898,0.972,0.792,0.976,0.268,0.976,0.969
+TOMEE,files_all,valid,0.996,0.898,0.988,0.81,0.994,0.268,0.994,0.982
+TOMEE,files_all,bugged,0.228,0.898,0.259,0.006,0.19,0.268,0.19,0.407
+TOMEE,methods_all,weighted avg,1,0,1,0,1,0,1,1
+TOMEE,methods_all,valid,1,?,1,0,1,0,1,1
+TOMEE,methods_all,bugged,?,?,0,0,0,0,0,0
+TOMEE,methods_most,weighted avg,1,0,1,0,1,0,1,1
+TOMEE,methods_most,valid,1,?,1,0,1,0,1,1
+TOMEE,methods_most,bugged,?,?,0,0,0,0,0,0
+TOMEE,files_most,weighted avg,0.986,0.803,0.984,0.785,0.986,0.258,0.986,0.983
+TOMEE,files_most,valid,0.996,0.803,0.993,0.794,0.995,0.258,0.995,0.99
+TOMEE,files_most,bugged,0.161,0.803,0.257,0.005,0.206,0.258,0.206,0.341
